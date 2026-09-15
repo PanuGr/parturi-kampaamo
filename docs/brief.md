@@ -38,9 +38,10 @@
 - [x] `src/data/site.ts` — Status: Salon Data & Metadata, SITE_DESCRIPTION 159 chars (150–160 target)
 - [x] `src/components/head.astro` — Status: Fonts, HairSalon + FAQPage JSON-LD colocated, query-free canonical, Unsplash preconnect (FAVICON import removed — export was already gone from site.ts)
 - [x] `src/components/Navbar.astro` — Status: Built (brand link fixed to `href="/"`)
-- [x] `src/components/Footer.astro` — Status: Built
+- [x] `src/components/Footer.astro` — Status: Built (privacy + accessibility links)
 - [x] `src/components/MobileStickyBar.astro` — Status: Built (no `py-2` shrink, 44px via SCSS)
 - [x] `src/components/PrivacyModal.astro` — Status: Built
+- [x] `src/components/AccessibilityModal.astro` — Status: Built (short statement, same modal pattern)
 - [x] `src/layouts/Layout.astro` — Status: Built (skip-link, WebMCP `get_salon_info`)
 - [x] `src/pages/index.astro` — Status: Built (figure/figcaption/cite testimonials, star aria, 4-image gallery, keyword-rich H1 + location H2, hero fetchpriority=high; FAQPage JSON-LD lives in head.astro)
 - [ ] `src/pages/404.astro` — Status: Missing (skipped per user decision in Phase 2)

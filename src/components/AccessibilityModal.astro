@@ -1,0 +1,30 @@
+---
+import { SALON_INFO } from "../data/site";
+---
+
+<div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-3">
+      <div class="modal-header border-bottom pb-3">
+        <h3 class="modal-title fs-5" id="accessibilityModalLabel">Saavutettavuusseloste</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+      </div>
+      <div class="modal-body text-secondary small py-4">
+        <p><strong>1. Tavoitteemme</strong><br />
+        Haluamme, että verkkosivumme on helppokäyttöinen kaikille. Noudatamme saavutettavuusvaatimuksia (WCAG 2.2, taso AA).</p>
+
+        <p><strong>2. Miten saavutettavuus on huomioitu</strong><br />
+        Sivua voi käyttää kokonaan näppäimistöllä. Tekstit ja taustat erottuvat selkeästi toisistaan. Painikkeet ovat riittävän suuria. Liikettä vähentävä asetus (reduced motion) on huomioitu.</p>
+
+        <p><strong>3. Tunnetut puutteet</strong><br />
+        Emme ole vielä testanneet sivua ruudunlukijalla. Jos kohtaat ongelman, kerro siitä meille – autamme mielellämme puhelimessa.</p>
+
+        <p><strong>4. Anna palautetta</strong><br />
+        Soita meille numeroon <a href={SALON_INFO.phoneTel}>{SALON_INFO.phone}</a>, niin korjaamme ongelman mahdollisimman pian.</p>
+      </div>
+      <div class="modal-footer border-top pt-3">
+        <button type="button" class="btn btn-luxury-dark py-2 px-4" data-bs-dismiss="modal">Sulje</button>
+      </div>
+    </div>
+  </div>
+</div>
