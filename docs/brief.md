@@ -3,7 +3,7 @@
 ## 1. Current Status
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Phase 4 — Accessibility fixes applied & verified (gold hover → $primary, $gold-bright #D4AF37 on dark, reduced-motion guards, btn-close 44px, FAQ 80ch, silent-service lang) |
+| **Last Completed Phase** | GitHub Pages migration (site + base, base-aware assets, .nojekyll, deploy workflow, netlify.toml removed — verified in dist) |
 | **Current Project Mode** | Review |
 | **Last Active Model** | Muse Spark (OpenCode) |
 
@@ -36,7 +36,11 @@
 - [x] `src/styles/_animations.scss` — Status: Scroll animations gated behind `prefers-reduced-motion: no-preference`
 - [x] `src/styles/index.scss` — Status: Active (Bootstrap import + partials)
 - [x] `src/data/site.ts` — Status: Salon Data & Metadata, SITE_DESCRIPTION 159 chars (150–160 target)
-- [x] `src/components/head.astro` — Status: Fonts, HairSalon + FAQPage JSON-LD colocated, query-free canonical, Unsplash preconnect (FAVICON import removed — export was already gone from site.ts)
+- [x] `astro.config.mjs` — Status: GitHub Pages (site panugr.github.io, base /parturi-kampaamo, sitemap customPages)
+- [x] `.github/workflows/deploy.yml` — Status: Build + deploy to Pages on push to main
+- [x] `public/.nojekyll` — Status: Present (Pages serves `_astro/` instead of Jekyll-ignoring it)
+- [x] `public/robots.txt` + `public/.well-known/api-catalog` — Status: URLs point to github.io (no double slashes)
+- [x] `src/components/head.astro` — Status: Base-aware favicon/sitemap hrefs via BASE_URL (trailing-slash-safe), GH JSON-LD url
 - [x] `src/components/Navbar.astro` — Status: Built (brand link fixed to `href="/"`)
 - [x] `src/components/Footer.astro` — Status: Built (privacy + accessibility links)
 - [x] `src/components/MobileStickyBar.astro` — Status: Built (no `py-2` shrink, 44px via SCSS)
