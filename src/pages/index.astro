@@ -19,7 +19,7 @@ import { SALON_INFO } from "../data/site";
 
 <Layout
   title="Parturi-Kampaamo | Kauniit ja huolitellut hiukset – Turku"
-  description="Ylellinen ja rentouttava parturi-kampaamo Turun keskustassa, Puutarhakatu 19. Selkeä hinnoittelu, asiantunteva palvelu. Varaa aikasi verkossa 24/7."
+  description="Ylellinen ja rentouttava parturi-kampaamo Turun keskustassa, Puutarhakatu 19. Selkeä hinnoittelu, asiantunteva palvelu. Varaa aikasi verkossa 24/7. Tervetuloa!"
 >
   <!-- 1. Hero Section (Above-the-fold) -->
   <section class="py-5 py-lg-6 position-relative border-bottom">
@@ -28,7 +28,7 @@ import { SALON_INFO } from "../data/site";
         <div class="col-lg-7">
           <span class="overline">PALVELEVA PARTURI-KAMPAAMO</span>
           <h1 class="display-4 fw-normal mt-2 mb-4">
-            Kauniit ja huolitellut hiukset – helposti ja rennosti
+            Parturi-kampaamo Turussa – kauniit hiukset helposti ja rennosti
           </h1>
           <p class="lead-editorial mb-4">
             Asiantunteva palvelu, selkeät hinnat ja rentouttava hetki arjen
@@ -89,7 +89,7 @@ import { SALON_INFO } from "../data/site";
               src="https://images.unsplash.com/photo-1560066984-138dadb4c035?avif=format&fit=crop&w=1000&q=80"
               alt="Rauhallinen ja tyylikäs parturi-kampaamomiljöö Turussa"
               class="img-fluid w-100 object-fit-cover" width="400" height="300"
-              loading="eager" decoding="sync"
+              loading="eager" fetchpriority="high" decoding="sync"
             />
             <div class="p-3 text-center border-top bg-light mt-2">
               <span
@@ -419,13 +419,97 @@ import { SALON_INFO } from "../data/site";
     </div>
   </section>
 
-  <!-- 6. Käytännön tiedot ja Sijainti (Practical Info & Location) -->
+  <!-- 6. Työnäytteet & tunnelma (Gallery) -->
+  <section class="py-5 py-lg-6 scroll-animate">
+    <div class="container-xl">
+      <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+        <span class="overline">TYÖNÄYTTEET & TUNNELMA</span>
+        <h2 class="display-6 mb-3">Kurkista liikkeeseemme</h2>
+        <p class="text-secondary">
+          Aitoja lopputuloksia ja rauhallinen tilamme. Tällainen hetki voi olla
+          sinun.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-6 col-lg-3">
+          <figure class="mb-0">
+            <div class="ratio ratio-4x3 border bg-white">
+              <img
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+                alt="Kampaaja leikkaa asiakkaan hiuksia tarkasti"
+                class="object-fit-cover w-100 h-100"
+                width="800" height="600"
+                loading="lazy" decoding="async"
+              />
+            </div>
+            <figcaption class="small text-secondary mt-2">
+              Tarkka leikkaus ja föönaus
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <figure class="mb-0">
+            <div class="ratio ratio-4x3 border bg-white">
+              <img
+                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+                alt="Pehmeäksi vaalennetut pitkät hiukset takaapäin"
+                class="object-fit-cover w-100 h-100"
+                width="800" height="600"
+                loading="lazy" decoding="async"
+              />
+            </div>
+            <figcaption class="small text-secondary mt-2">
+              Pehmeä vaalennus ja sävytys
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <figure class="mb-0">
+            <div class="ratio ratio-4x3 border bg-white">
+              <img
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80"
+                alt="Asiakkaan hiustenpesu kampaamon pesupisteessä"
+                class="object-fit-cover w-100 h-100"
+                width="800" height="600"
+                loading="lazy" decoding="async"
+              />
+            </div>
+            <figcaption class="small text-secondary mt-2">
+              Rentouttava pesu ja hieronta
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <figure class="mb-0">
+            <div class="ratio ratio-4x3 border bg-white">
+              <img
+                src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80"
+                alt="Valoisa ja raikas kampaamon sisätila tuoleineen"
+                class="object-fit-cover w-100 h-100"
+                width="800" height="600"
+                loading="lazy" decoding="async"
+              />
+            </div>
+            <figcaption class="small text-secondary mt-2">
+              Raikas ja rauhallinen liikkeemme
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Käytännön tiedot ja Sijainti (Practical Info & Location) -->
   <section class="py-5 py-lg-6 scroll-animate">
     <div class="container-xl">
       <div class="row gy-5 align-items-center">
         <div class="col-lg-6">
           <span class="overline">KÄYNTIOSOITE & SAAPUMINEN</span>
-          <h2 class="display-6 mb-4">Helppo tulla ja vaivaton asioida</h2>
+          <h2 class="display-6 mb-4">Helppo tulla – parturi-kampaamo Turun keskustassa</h2>
 
           <div class="d-flex flex-column gap-4">
             <div class="d-flex gap-3">
@@ -531,7 +615,7 @@ import { SALON_INFO } from "../data/site";
     </div>
   </section>
 
-  <!-- 7. Usein kysytyt kysymykset (FAQ & 24h peruutusehdot) -->
+  <!-- 8. Usein kysytyt kysymykset (FAQ & 24h peruutusehdot) -->
   <section class="py-5 py-lg-6 bg-white border-top border-bottom scroll-animate">
     <div class="container-xl" style="max-width: 800px;">
       <div class="text-center mb-5">
@@ -635,7 +719,7 @@ import { SALON_INFO } from "../data/site";
     </div>
   </section>
 
-  <!-- 8. Loppukehoite (Bottom CTA) -->
+  <!-- 9. Loppukehoite (Bottom CTA) -->
   <section id="ajanvaraus" class="py-5 py-lg-6 bg-dark-luxury text-center scroll-animate">
     <div class="container-xl py-lg-4">
       <span class="overline text-warning">VARAA OMA HETKESI</span>

@@ -1,6 +1,6 @@
 // Parturi-Kampaamo site data & metadata
 export const SITE_TITLE = 'Parturi-Kampaamo | Kauniit ja huolitellut hiukset – Turku';
-export const SITE_DESCRIPTION = 'Ylellinen ja rentouttava parturi-kampaamo Turun keskustassa, Puutarhakatu 19. Selkeä hinnoittelu, asiantunteva palvelu ja 100 % tyytyväisyystakuu.';
+export const SITE_DESCRIPTION = 'Ylellinen ja rentouttava parturi-kampaamo Turun keskustassa, Puutarhakatu 19. Selkeä hinnoittelu, asiantunteva palvelu. Varaa aikasi verkossa 24/7. Tervetuloa!';
 export const SITE_KEYWORDS = 'parturi, kampaamo, Turku, hiustenleikkaus, värjäys, raidat, Puutarhakatu, ajanvaraus';
 export const SOCIAL_IMAGE = 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80';
 export const FAVICON = '/images/apple.png';

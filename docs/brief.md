@@ -3,8 +3,8 @@
 ## 1. Current Status
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Phase 5 — UX Review fixes (44px tap targets, testimonial figure/figcaption/cite, star-rating aria) |
-| **Current Project Mode** | Complete / Review |
+| **Last Completed Phase** | Phase 2 — SEO & Pre-Launch Review (Blocking + Important fixes applied & verified; 404 skipped per user, nice-to-haves open) |
+| **Current Project Mode** | Review |
 | **Last Active Model** | Muse Spark (OpenCode) |
 
 ---
@@ -20,6 +20,7 @@
 - **No Form:** Yhteydenottolomaketta ei käytetä (korvattu suoralla varauksella ja puhelinpalvelulla).
 - **Privacy Policy:** Tietosuojaseloste avautuu saavutettavassa modaali-ikkunassa (`src/components/PrivacyModal.astro`).
 - **Visual Design System:** **Luxury / Editorial** (`docs/design.md`). Arkkitehtonisen suorat 0px linjat, kallis lämmin alabasteripohja (`#F9F8F6`), syvä hiili (`#1A1A1A`), kultainen tehoste käytössä tummuuskorjattuna (`$warning: #8d6d05`, johdettu `#D4AF37`:stä AA-kontrastin vuoksi), Playfair Display -serif-otsikot ja Inter-leipäteksti.
+- **Gallery (new):** 4-kuvan Unsplash-galleria lisätty `src/pages/index.astro`:ään arvio- ja sijaintiosioiden väliin (plan.md kohta 5).
 
 ---
 
@@ -35,17 +36,20 @@
 - [x] `src/styles/_navbar.scss` — Status: Updated with Header & Mobile Sticky Bar + `.brand-title` 44px rule
 - [x] `src/styles/_animations.scss` — Status: Active (scroll-animate / fade-in-up)
 - [x] `src/styles/index.scss` — Status: Active (Bootstrap import + partials)
-- [x] `src/data/site.ts` — Status: Updated with Salon Data & Metadata
-- [x] `src/components/head.astro` — Status: Updated with Fonts & HairSalon Schema
-- [x] `src/components/Navbar.astro` — Status: Built (no `py-2` shrink on CTA, 44px via SCSS)
+- [x] `src/data/site.ts` — Status: Salon Data & Metadata, SITE_DESCRIPTION 159 chars (150–160 target)
+- [x] `src/components/head.astro` — Status: Fonts, HairSalon + FAQPage JSON-LD colocated
+- [x] `src/components/Navbar.astro` — Status: Built (brand link fixed to `href="/"`)
 - [x] `src/components/Footer.astro` — Status: Built
 - [x] `src/components/MobileStickyBar.astro` — Status: Built (no `py-2` shrink, 44px via SCSS)
 - [x] `src/components/PrivacyModal.astro` — Status: Built
 - [x] `src/layouts/Layout.astro` — Status: Built (skip-link, WebMCP `get_salon_info`)
-- [x] `src/pages/index.astro` — Status: Built (testimonials as `figure`/`figcaption`/`cite`, star ratings with `role="img"` + `aria-label`)
-- [x] `docs/phase1_ux_review.md` — Status: Resolved & removed (all 3 issues fixed: tap targets, blockquote semantics, star-rating aria)
+- [x] `src/pages/index.astro` — Status: Built (figure/figcaption/cite testimonials, star aria, 4-image gallery, keyword-rich H1 + location H2, hero fetchpriority=high; FAQPage JSON-LD lives in head.astro)
+- [ ] `src/pages/404.astro` — Status: Missing (skipped per user decision in Phase 2)
+- [x] `docs/brief.md` — Status: Updated (Phase 2 audit recorded)
 
 ---
 
 ## 4. Immediate Next Steps for the Incoming Model
-1. Continue review
+1. AWAIT CONFIRMATION: apply Phase 2 Blocking + Important SEO fixes (FAQ JSON-LD, H1/H2 keywords, meta description 150–160 chars, hero fetchpriority, 404 + noindex, brand link `href="/"`) — user picks scope.
+2. Then continue to Phase 3 (Code audition: code-simplification → code-reviewer → performance-optimization → security-auditor).
+3. Then Phase 4 (Accessibility audit per A11Y.md).
