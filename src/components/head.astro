@@ -23,15 +23,17 @@ import {
 <!-- Bunny Fonts (GDPR compliant: Inter & Playfair Display) -->
 <link rel="preconnect" href="https://fonts.bunny.net" />
 <link href="https://fonts.bunny.net/css?family=inter:400,500,600|playfair-display:400,500,600&display=swap" rel="stylesheet" />
-
 <link rel="sitemap" href="/sitemap-0.xml" />
 <meta name="keywords" content={SITE_KEYWORDS} />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <SEOMetadata
   siteName={SITE_TITLE}
   title={title || SITE_TITLE}
   description={description || SITE_DESCRIPTION}
   image={image || SOCIAL_IMAGE}
-  favicon={FAVICON}
+  
   author="Panagiotis Panagiotakopoulos"
   astroSitemap={true}
   canonicalUrl={Astro.url.toString()}
