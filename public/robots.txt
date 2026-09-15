@@ -3,4 +3,4 @@ Allow: /
 
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
-Sitemap: https://parturi-kampaamo.netlify.app/sitemap-0.xml
+Sitemap: https://https://panugr.github.io/parturi-kampaamo//sitemap-0.xml

@@ -5,7 +5,7 @@ import llms from "astro-llms-md";
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  site: 'https://parturi-kampaamo.netlify.app',
+  site: 'https://https://panugr.github.io/parturi-kampaamo/',
   trailingSlash: "never",
   prefetch: true,
   markdown: {
@@ -21,8 +21,8 @@ export default defineConfig({
     sitemap({
       lastmod: new Date(),
       customPages: [
-        'https://parturi-kampaamo.netlify.app/llms.txt',
-        'https://parturi-kampaamo.netlify.app/llms-full.txt'
+        'https://https://panugr.github.io/parturi-kampaamo//llms.txt',
+        'https://https://panugr.github.io/parturi-kampaamo//llms-full.txt'
       ],
     }),
   ],

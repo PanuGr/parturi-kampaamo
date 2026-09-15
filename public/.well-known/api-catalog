@@ -1,16 +1,16 @@
 {
-  "resource": "https://parturi-kampaamo.netlify.app",
+  "resource": "https://https://panugr.github.io/parturi-kampaamo/",
   "linkset": [
     {
-      "anchor": "https://parturi-kampaamo.netlify.app/",
+      "anchor": "https://https://panugr.github.io/parturi-kampaamo//",
       "rel": "service-desc",
-      "href": "https://parturi-kampaamo.netlify.app/llms.txt",
+      "href": "https://https://panugr.github.io/parturi-kampaamo//llms.txt",
       "type": "text/plain"
     },
     {
-      "anchor": "https://parturi-kampaamo.netlify.app/",
+      "anchor": "https://https://panugr.github.io/parturi-kampaamo//",
       "rel": "service-doc",
-      "href": "https://parturi-kampaamo.netlify.app/llms-full.txt",
+      "href": "https://https://panugr.github.io/parturi-kampaamo//llms-full.txt",
       "type": "text/plain"
     } 
   ]
