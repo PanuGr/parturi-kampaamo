@@ -3,7 +3,7 @@
 ## 1. Current Status
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Phase 2 — SEO & Pre-Launch Review (Blocking + Important fixes applied & verified; 404 skipped per user, nice-to-haves open) |
+| **Last Completed Phase** | Phase 3 — Code audition (4 audits done, fixes NOT applied — awaiting confirmation) |
 | **Current Project Mode** | Review |
 | **Last Active Model** | Muse Spark (OpenCode) |
 
@@ -37,7 +37,7 @@
 - [x] `src/styles/_animations.scss` — Status: Active (scroll-animate / fade-in-up)
 - [x] `src/styles/index.scss` — Status: Active (Bootstrap import + partials)
 - [x] `src/data/site.ts` — Status: Salon Data & Metadata, SITE_DESCRIPTION 159 chars (150–160 target)
-- [x] `src/components/head.astro` — Status: Fonts, HairSalon + FAQPage JSON-LD colocated
+- [x] `src/components/head.astro` — Status: Fonts, HairSalon + FAQPage JSON-LD colocated, query-free canonical, Unsplash preconnect (FAVICON import removed — export was already gone from site.ts)
 - [x] `src/components/Navbar.astro` — Status: Built (brand link fixed to `href="/"`)
 - [x] `src/components/Footer.astro` — Status: Built
 - [x] `src/components/MobileStickyBar.astro` — Status: Built (no `py-2` shrink, 44px via SCSS)
@@ -50,6 +50,5 @@
 ---
 
 ## 4. Immediate Next Steps for the Incoming Model
-1. AWAIT CONFIRMATION: apply Phase 2 Blocking + Important SEO fixes (FAQ JSON-LD, H1/H2 keywords, meta description 150–160 chars, hero fetchpriority, 404 + noindex, brand link `href="/"`) — user picks scope.
-2. Then continue to Phase 3 (Code audition: code-simplification → code-reviewer → performance-optimization → security-auditor).
-3. Then Phase 4 (Accessibility audit per A11Y.md).
+1. AWAIT CONFIRMATION: apply Phase 3 Blocking + Important fixes (real booking URL + verify phone/address, `fallow` npm script, canonical without query params, Unsplash preconnect, image dimensions/CLS, author meta, FAVICON import) — user picks scope.
+2. Then Phase 4 (Accessibility audit per A11Y.md).

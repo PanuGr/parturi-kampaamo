@@ -9,12 +9,13 @@ export interface Props {
 }
 
 const { title, description, image } = Astro.props;
+// Canonical without query params or hash (avoids duplicate-content signals from ?utm links)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
   SOCIAL_IMAGE,
-  FAVICON,
 } from "../data/site";
 ---
 <meta charset="UTF-8" />
@@ -22,6 +23,7 @@ import {
 <meta name="color-scheme" content="light" />
 <!-- Bunny Fonts (GDPR compliant: Inter & Playfair Display) -->
 <link rel="preconnect" href="https://fonts.bunny.net" />
+<link rel="preconnect" href="https://images.unsplash.com" />
 <link href="https://fonts.bunny.net/css?family=inter:400,500,600|playfair-display:400,500,600&display=swap" rel="stylesheet" />
 <link rel="sitemap" href="/sitemap-0.xml" />
 <meta name="keywords" content={SITE_KEYWORDS} />
@@ -36,7 +38,7 @@ import {
   
   author="Panagiotis Panagiotakopoulos"
   astroSitemap={true}
-  canonicalUrl={Astro.url.toString()}
+  canonicalUrl={canonicalURL.href}
   type={"website"}
   astroGenerator={true}
 />
