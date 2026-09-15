@@ -85,8 +85,7 @@ Check with (cloudflare)[https://isitagentready.com/] for implementation.
 
 ## Phase 3 - AI Integration
 Provide an idea, how could an AI-model be integrated in this project? Available models:
-- Gemini API (available models: Gemini Flash, Flash-light, Gemma)
-- Mistral API (available model: Mistral-embed, ministral-3b/8b, codestral, voxtral-mini, voxtral-mini-transcribe-realtime, voxtral-small, mistral-moderation)
+- Gemini API 
 - Free models with OpenRouter API
 
 ## Phase Handoff Requirement (MANDATORY)
