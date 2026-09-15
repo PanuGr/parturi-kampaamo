@@ -42,6 +42,7 @@
 - [x] `src/components/MobileStickyBar.astro` — Status: Built (no `py-2` shrink, 44px via SCSS)
 - [x] `src/components/PrivacyModal.astro` — Status: Built
 - [x] `src/components/AccessibilityModal.astro` — Status: Built (short statement, same modal pattern)
+- [x] `public/auth.md` — Status: Written (public resources need no auth; no authenticated endpoints; external booking + contact)
 - [x] `src/layouts/Layout.astro` — Status: Built (skip-link, WebMCP `get_salon_info`)
 - [x] `src/pages/index.astro` — Status: Built (figure/figcaption/cite testimonials, star aria, 4-image gallery, keyword-rich H1 + location H2, hero fetchpriority=high; FAQPage JSON-LD lives in head.astro)
 - [ ] `src/pages/404.astro` — Status: Missing (skipped per user decision in Phase 2)
