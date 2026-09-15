@@ -44,19 +44,6 @@ a[target="_blank"] {
   text-decoration-style: dashed;
 }
 
-// Automatic external link icon
-a[href^="http"]:not([href*="parturi-kampaamo"]):not([href*="localhost"]):not(:has(img))::after {
-  display: inline-block;
-  content: "";
-  width: 14px;
-  height: 14px;
-  background-color: currentColor;
-  background-image: url("/images/arrow-up-right.svg"); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: 0.25rem;
-}
-
 img,
 svg {
   display: block;
