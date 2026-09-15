@@ -1,0 +1,67 @@
+// ============================================================
+// DON'T OVERRIDE
+// ============================================================
+
+@view-transition {
+  navigation: auto;
+}
+html {
+  interpolate-size: allow-keywords;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: system-ui, sans-serif;
+  text-wrap: balance;
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+a[target="_blank"] {
+  text-decoration-style: dashed;
+}
+//add automatically external link icon to all external links
+a[href^="http"]:not([href*="domain-name"]):not(:has(img))::after {
+    display: inline-block;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: currentColor;
+    background-image: url("/images/arrow-up-right.svg"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.25rem;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+.visually-hidden-focusable {
+  width: fit-content;
+  position: absolute;
+  top: 10vh;
+  left: 1rem;
+  padding: 10px;
+  color: white;
+  z-index: 1;
+}

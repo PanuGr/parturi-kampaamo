@@ -1,0 +1,22 @@
+details {
+  & summary::marker {
+    content: none; /* Hide default marker for Modern browsers */
+  }
+  & summary {
+    list-style: none; /* Hide default marker for older WebKit browsers */
+    position: relative; /* Set positioning context for custom marker below */
+    padding-inline-start: 1.5rem; /* Adust for your layout */
+    &::before {
+      content: '➔'; /* Replace default marker so it can be animated */
+      position: absolute;
+      inset-inline-start: 0.5rem; /* Adust for your layout */
+      font-size: 0.8em; /* Adust for your layout */
+      @media (prefers-reduced-motion: no-preference) { /* Be nice to others */
+        transition: rotate 0.25s ease-in;
+      }
+    }
+    [open] &::before {
+      rotate: 90deg; /* Simple rotation to indicate panel is open */
+    }
+  }
+}

@@ -1,0 +1,60 @@
+// ============================================================
+// Design Tokens - Ankelo Ky
+// Derived from: style.md (approved prototype)
+// ============================================================
+
+// 1. Colors (Custom palette)
+$primary: #ffd700;
+$secondary: #666666;
+$success: #7da86b;
+$warning: #e3b341;
+$danger: #c86a6a;
+$light: #f8f9fa;
+$dark: #090909;
+$black: #111111;
+
+// 2. Base Theme (Explicit overrides)
+$body-bg: #f8f9fa;
+$body-color: #212529;
+$border-color: #dee2e6;
+
+// 3. Shape & Radius
+$border-radius: 0.125rem;
+$border-radius-sm: 0.125rem;
+$border-radius-lg: 0.25rem;
+$border-radius-pill: 9999px;
+
+// 4. Buttons
+$btn-font-weight: 700;
+$btn-padding-y: 0.875rem;
+$btn-padding-x: 1.5rem;
+$btn-border-radius: $border-radius;
+
+// 5. Forms / Inputs
+$input-bg: $body-bg;
+$input-color: $body-color;
+$input-border-color: $border-color;
+$input-border-radius: 0;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow: none;
+$input-padding-y: 0.75rem;
+$input-padding-x: 1rem;
+
+// 6. Components
+$card-border-color: $border-color;
+$card-border-radius: 0;
+
+// 7. Navbar (Light variant)
+$navbar-light-color: $black;
+$navbar-light-brand-color: $navbar-light-color;
+$navbar-light-hover-color: $black;
+$navbar-light-brand-hover-color: $navbar-light-hover-color;
+
+// 8. Navbar (Dark variant)
+// These apply when .navbar-dark is used in HTML.
+$navbar-dark-color: rgba(255, 255, 255, 0.82);
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $primary;
+$navbar-dark-brand-color: $primary;
+$navbar-dark-brand-hover-color: $primary;
+$navbar-dark-toggler-border-color: rgba(255, 255, 255, 0.16);

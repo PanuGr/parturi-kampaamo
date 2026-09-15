@@ -1,0 +1,32 @@
+{
+  "name": "parturi-kampaamo",
+  "type": "module",
+  "version": "1",
+  "scripts": {
+    "start": "astro dev",
+    "repomix": "repomix",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "html": "html-validate ./dist/*/*.html"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/sitemap": "^3.7.4",
+    "@lucide/astro": "^1.46.0",
+    "astro": "^7.3.2",
+    "astro-seo-metadata": "^0.6.0",
+    "bootstrap": "^5.3.8",
+    "sass": "^1.104.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "@types/bootstrap": "^5.2.11",
+    "astro-llms-md": "^2.2.2",
+    "fallow": "^3.25.0",
+    "html-validate": "^11.15.0",
+    "repomix": "^1.18.0",
+    "typescript": "^6.0.3"
+  }
+}

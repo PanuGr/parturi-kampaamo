@@ -1,0 +1,17 @@
+{
+  "resource": "https://parturi-kampaamo.netlify.app",
+  "linkset": [
+    {
+      "anchor": "https://parturi-kampaamo.netlify.app/",
+      "rel": "service-desc",
+      "href": "https://parturi-kampaamo.netlify.app/llms.txt",
+      "type": "text/plain"
+    },
+    {
+      "anchor": "https://parturi-kampaamo.netlify.app/",
+      "rel": "service-doc",
+      "href": "https://parturi-kampaamo.netlify.app/llms-full.txt",
+      "type": "text/plain"
+    } 
+  ]
+}

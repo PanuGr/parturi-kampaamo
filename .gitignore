@@ -1,0 +1,7 @@
+dist/
+.astro/
+node_modules/
+.env
+.netlify/
+codebase.xml
+.antigravitycli

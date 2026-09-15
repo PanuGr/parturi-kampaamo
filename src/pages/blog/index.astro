@@ -1,0 +1,227 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { parseDate } from "../../data/date";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+
+// Filter and sort posts
+const sortedPosts = posts
+    .filter(
+        (post) =>
+            !post.id?.includes("tietosuoja") &&
+            !post.id?.includes("saavutettavuusseloste"),
+    )
+    .sort(
+        (a, b) =>
+            (parseDate(b.data.date)?.getTime() ?? 0) -
+            (parseDate(a.data.date)?.getTime() ?? 0),
+    );
+
+const categories = [
+    ...new Set(sortedPosts.map((post) => post.data.category)),
+].filter(Boolean);
+---
+
+<style is:inline>
+    #hero {
+        display: none !important;
+    }
+
+    .blog-header {
+        padding: 8rem 0 0rem;
+    }
+
+    .card-img-top {
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+</style>
+
+<Layout
+    title="DigiSolutech | Tietopankki: Oppaita ja artikkeleita kotisivuista"
+    description="DigiSolutechin tietopankki tarjoaa syvällisiä oppaita ja artikkeleita kotisivujen rakentamisesta, hakukoneoptimoinnista ja digitaalisesta menestyksestä."
+>
+    <header class="blog-header text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3 text-white">Tietopankki</h1>
+            <p class="lead col-lg-8 mx-auto text-muted">
+                Kokoan tänne hyödyllistä tietoa ja käytännön vinkkejä, joiden
+                avulla teet kotisivuistasi yrityksesi parhaan myyjän.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content" class="container py-5 mt-5">
+        <div
+            class="mb-5 d-flex flex-wrap justify-content-center gap-2"
+            id="category-filters"
+        >
+            <button
+                class="btn btn-primary rounded-pill px-4 filter-btn active"
+                data-category="all">Kaikki</button
+            >
+            {
+                categories.map((category) => (
+                    <button
+                        class="btn btn-outline-primary rounded-pill px-4 filter-btn"
+                        data-category={category}
+                    >
+                        {category}
+                    </button>
+                ))
+            }
+        </div>
+
+        <div class="row g-4" id="articles-grid">
+            {
+                sortedPosts.map((post) => (
+                    <div
+                        class="col-md-6 col-lg-4 article-card"
+                        data-category={post.data.category}
+                        style="display: none;"
+                    >
+                        <a
+                            href={`/blog/${post.id}`}
+                            class="card text-decoration-none h-100"
+                        >
+                            {post.data.image && (
+                                <div class="overflow-hidden">
+                                    <img
+                                        src={post.data.image}
+                                        alt={post.data.title}
+                                        class="card-img-top img-fluid"
+                                        loading="lazy"
+                                        onerror="this.src='https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=800&auto=format&fit=crop&q=80'"
+                                    />
+                                </div>
+                            )}
+                            <div class="card-body p-4 d-flex flex-column">
+                                <span class="text-accent fw-bold text-uppercase small ls-1 mb-2">
+                                    {post.data.category}
+                                </span>
+                                <h2 class="card-title h4 fw-bold text-white mb-3">
+                                    {post.data.title}
+                                </h2>
+                                {post.data.description && (
+                                    <p class="card-text text-muted description-clamp mb-4">
+                                        {post.data.description}
+                                    </p>
+                                )}
+                                <div class="mt-auto pt-3 border-top border-secondary-subtle">
+                                    <time
+                                        class="small text-muted"
+                                        datetime={
+                                            parseDate(post.data.date)
+                                                ?.toISOString()
+                                                .split("T")[0] ?? post.data.date
+                                        }
+                                    >
+                                        {post.data.date}
+                                    </time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+
+        <div class="text-center mt-5 pt-4">
+            <button
+                id="load-more-btn"
+                class="btn btn-outline-primary rounded-pill px-5 py-3 d-inline-flex align-items-center gap-2"
+            >
+                <span>Lataa lisää</span>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M12 5v14"></path><path d="m5 12 7 7 7-7"
+                    ></path></svg
+                >
+            </button>
+            <div class="mt-4">
+                <a
+                    href="/blog/arkisto"
+                    class="text-muted small text-decoration-none hover-opacity"
+                >
+                    Siirry koko arkistoon &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(
+            ".article-card",
+        ) as NodeListOf<HTMLElement>;
+        const loadMoreBtn = document.getElementById("load-more-btn");
+
+        let currentLimit = 9;
+        let currentCategory = "all";
+
+        function updateVisibility() {
+            let visibleCount = 0;
+            let totalMatchCount = 0;
+
+            cards.forEach((card) => {
+                const categoryMatch =
+                    currentCategory === "all" ||
+                    card.getAttribute("data-category") === currentCategory;
+
+                if (categoryMatch) {
+                    totalMatchCount++;
+                    if (visibleCount < currentLimit) {
+                        card.style.display = "block";
+                        visibleCount++;
+                    } else {
+                        card.style.display = "none";
+                    }
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            if (loadMoreBtn) {
+                loadMoreBtn.style.display =
+                    visibleCount < totalMatchCount ? "inline-flex" : "none";
+            }
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                buttons.forEach((btn) => {
+                    btn.classList.remove("btn-primary", "active");
+                    btn.classList.add("btn-outline-primary");
+                });
+                button.classList.remove("btn-outline-primary");
+                button.classList.add("btn-primary", "active");
+
+                currentCategory = button.getAttribute("data-category") || "all";
+                currentLimit = 9;
+                updateVisibility();
+            });
+        });
+
+        loadMoreBtn?.addEventListener("click", () => {
+            currentLimit += 9;
+            updateVisibility();
+        });
+
+        // Initial call
+        updateVisibility();
+    });
+</script>

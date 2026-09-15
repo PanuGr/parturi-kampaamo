@@ -1,0 +1,6 @@
+/* Position the close button where you like */
+dialog button {
+  position: absolute;
+  top: .5rem;
+  right: 1em;
+}

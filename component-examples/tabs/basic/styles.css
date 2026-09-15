@@ -1,0 +1,61 @@
+.tabs {
+  /* Because I chose to use a UL */
+  padding: 0;
+  /* Adding some color */
+  background: var(--green-med);
+  /* Initially create a multi-column grid */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 1rem;
+  /* Hide tab content that is currently "offscreen" */
+  overflow-y: hidden;
+  /* Fixed height is not always appropriate, but highlights tab content can scroll within each tab panel */
+  block-size: 300px;
+  /* Give some space above for the "tabs" */
+  margin-block-start: 4rem;
+  /* Define where where the "tabs" go & behave */
+  scroll-marker-group: before;
+  scroll-snap-type: x mandatory;
+  /* Hide the horizontal scrollbar */
+  scrollbar-width: none;
+  /* Define the "tab" group */
+  anchor-name: --tabs-basic;
+  &::scroll-marker-group {
+    position-anchor: --tabs-basic;
+    /* Create the tabs layout */
+    display: flex;
+    column-gap: 1rem;
+    align-items: end;
+    justify-content: start;
+    /* Correlate & position the tab anchors */
+    position: absolute;
+    bottom: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+  }
+}
+.tab {
+  padding: 1rem;
+  overflow-y: scroll;
+  /* Define scroll snap to the start of each slide */
+  scroll-snap-align: start;
+  &::scroll-marker {
+    /* Create the "tab" content based on its `aria-label` */
+    content: attr(aria-label);
+    /* Make it look pretty... */
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    background: var(--green-dark);
+    border: 1px solid var(--green-med);
+    border-bottom: none;
+    color: white;
+  }
+  /* Note that nesting `:target-current` doesn't work */
+  &::scroll-marker:target-current {
+    background: var(--green-med);
+  }
+}

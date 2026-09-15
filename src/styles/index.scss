@@ -1,0 +1,13 @@
+
+// index.scss
+@import "variables"; // Your custom overrides
+@import "bootstrap/scss/bootstrap"; // Bootstrap picks up the variables automatically
+@import "base";
+@import "hero";
+@import "buttons";
+@import "navbar";
+@import "animations";
+
+// =============================================================================
+// Other Selectors
+// =============================================================================
