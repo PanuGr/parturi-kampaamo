@@ -3,7 +3,7 @@
 ## 1. Current Status
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Phase 3 — Code audition (4 audits done, fixes NOT applied — awaiting confirmation) |
+| **Last Completed Phase** | Phase 4 — Accessibility fixes applied & verified (gold hover → $primary, $gold-bright #D4AF37 on dark, reduced-motion guards, btn-close 44px, FAQ 80ch, silent-service lang) |
 | **Current Project Mode** | Review |
 | **Last Active Model** | Muse Spark (OpenCode) |
 
@@ -30,11 +30,10 @@
 - [x] `docs/copy-landing.md` — Status: Approved & Updated
 - [x] `docs/design.md` — Status: Rewritten to Bootstrap
 - [x] `docs/prototype.html` — Status: Reference Prototype
-- [x] `src/styles/_variables.scss` — Status: Tokens Mapped & Active (`$warning: #8d6d05`, `$light: #FFFFFF`)
-- [x] `src/styles/_base.scss` — Status: Updated with Luxury Styles + `footer a` 44px tap-target rule
-- [x] `src/styles/_buttons.scss` — Status: Updated with Luxury Buttons + `.btn` 44px min-height guard
-- [x] `src/styles/_navbar.scss` — Status: Updated with Header & Mobile Sticky Bar + `.brand-title` 44px rule
-- [x] `src/styles/_animations.scss` — Status: Active (scroll-animate / fade-in-up)
+- [x] `src/styles/_variables.scss` — Status: Tokens Mapped & Active (`$warning: #8d6d05`, `$light: #FFFFFF`, `$gold-bright: #D4AF37` for dark-bg text)
+- [x] `src/styles/_base.scss` — Status: Luxury styles + 44px tap-target rules + reduced-motion-gated smooth scroll/view-transition + dark-overline gold + FAQ 80ch
+- [x] `src/styles/_buttons.scss` — Status: Luxury Buttons + 44px guards (incl. `.btn-close`), gold hover → `$primary` (was 2.85:1)
+- [x] `src/styles/_animations.scss` — Status: Scroll animations gated behind `prefers-reduced-motion: no-preference`
 - [x] `src/styles/index.scss` — Status: Active (Bootstrap import + partials)
 - [x] `src/data/site.ts` — Status: Salon Data & Metadata, SITE_DESCRIPTION 159 chars (150–160 target)
 - [x] `src/components/head.astro` — Status: Fonts, HairSalon + FAQPage JSON-LD colocated, query-free canonical, Unsplash preconnect (FAVICON import removed — export was already gone from site.ts)
@@ -50,5 +49,5 @@
 ---
 
 ## 4. Immediate Next Steps for the Incoming Model
-1. AWAIT CONFIRMATION: apply Phase 3 Blocking + Important fixes (real booking URL + verify phone/address, `fallow` npm script, canonical without query params, Unsplash preconnect, image dimensions/CLS, author meta, FAVICON import) — user picks scope.
-2. Then Phase 4 (Accessibility audit per A11Y.md).
+1. AWAIT CONFIRMATION: apply Phase 4 HIGH fixes (gold hover contrast, dark overline contrast, reduced-motion guards) + optionally MEDIUM/LOW (btn-close hit area, FAQ 80ch, silent-service lang) — user picks scope.
+2. After fixes: human validation required (tab order, 200%/320px reflow, screen reader, voice control) + REPORT.md per A11Y §7 before any delivery claim.

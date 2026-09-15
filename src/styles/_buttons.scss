@@ -24,6 +24,11 @@
   }
 }
 
+.btn-close {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 .btn-luxury-dark {
   background-color: $primary;
   color: #FFFFFF;
@@ -74,8 +79,8 @@
 
   &:hover,
   &:focus-visible {
-    background-color: #B89528;
-    border-color: #B89528;
+    background-color: $primary;
+    border-color: $primary;
     color: #FFFFFF;
   }
 }
