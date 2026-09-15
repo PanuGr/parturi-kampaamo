@@ -39,57 +39,31 @@
 
 ### Palvelukortit
 
-#### 1. Parturileikkaus
-- **Hinta:** 32 €
-- **Kesto:** 30 min
+#### 1. Parturi-kampaamoleikkaus
+- **Hinta:** 38 € – 48 €
+- **Kesto:** 30 – 45 min
 - **Mitä sisältää:**
-  - Hiusten leikkaus ja siistiminen toiveidesi mukaan
-  - Rentouttava pesu ja hiuspohjan hieronta
-  - Viimeistely ja muotoilutuotteet
-- **Painike:** `Varaa parturileikkaus`
+  - Alkukonsultaatio ja toiveiden läpikäynti
+  - Rentouttava pesu hoitotuotteilla ja hiuspohjan hieronta
+  - Huolellinen leikkaus ja viimeistely muotoilutuotteilla
+- **Painike:** `Varaa hiustenleikkaus`
 
-#### 2. Kampaamoleikkaus
-- **Hinta:** 48 €
-- **Kesto:** 45 min
-- **Mitä sisältää:**
-  - Alkukeskustelu ja toiveiden läpikäynti
-  - Pesu hoitotuotteilla ja hiuspohjan hieronta
-  - Huolellinen leikkaus ja föönaus/muotoilu
-- **Painike:** `Varaa kampaamoleikkaus`
-
-#### 3. Väri ja leikkaus (Klassikko)
+#### 2. Värjäys ja raidat
 - **Hinta:** alk. 115 €
-- **Kesto:** 1 h 45 min
+- **Kesto:** 1 h 45 min – 2 h 30 min
 - **Mitä sisältää:**
-  - Koko pään tasainen väri tai tyviväri
-  - Hiusten leikkaus ja siistiminen
-  - Ravitseva hoito ja viimeistely
+  - Koko pään väri, tyviväri tai moniväriraidoitus
+  - Sävykäsittely ja hiusrakennetta suojaava tehohoito
+  - Leikkaus, föönaus ja viimeistely
 - **Painike:** `Varaa väripalvelu`
 
-#### 4. Raidat, moniväri tai vaalennus
-- **Hinta:** alk. 135 €
-- **Kesto:** 2 h 15 min
-- **Mitä sisältää:**
-  - Huolellinen raidoitus (folio- tai vapaan käden tekniikka)
-  - Sävytys ja hiusta suojaava hoito
-  - Leikkaus ja föönaus
-- **Painike:** `Varaa raidoitus`
-
-#### 5. Lasten ja nuorten leikkaus (alle 12 v)
-- **Hinta:** 25 €
+#### 3. Lapset ja eläkeläiset (Erikoishinnat)
+- **Hinta:** 25 € – 32 €
 - **Kesto:** 30 min
 - **Mitä sisältää:**
-  - Ystävällinen ja rauhallinen palvelu lapsen tahdissa
-  - Leikkaus ja toivottu muotoilu
-- **Painike:** `Varaa lasten leikkaus`
-
-#### 6. Parran muotoilu ja siistiminen
-- **Hinta:** 20 €
-- **Kesto:** 20 min
-- **Mitä sisältää:**
-  - Parran ja viiksien muotoilu saksilla ja koneella
-  - Rajojen siistiminen ja hoitoöljy
-- **Painike:** `Varaa parran muotoilu`
+  - Rauhallinen ja ystävällinen leikkaus ilman kiirettä
+  - Siistiminen ja toivottu kevyt viimeistely
+- **Painike:** `Varaa erikoishintainen leikkaus`
 
 ---
 
@@ -132,7 +106,7 @@
 
 ## 7. Käytännön tiedot ja Sijainti (Practical Info)
 - **Otsikko (H2):** Helppo tulla ja asioida
-- **Osoite:** Puutarhakatu 19, 20100 Turku
+- **Osoite:** [Puutarhakatu 19, 20100 Turku](https://maps.google.com/?q=Puutarhakatu+19,+20100+Turku) *(avaa reittiohjeet Google Mapsissa)*
 - **Aukioloajat:**
   - Maanantai – Perjantai: 09:00 – 19:00
   - Lauantai: 10:00 – 16:00

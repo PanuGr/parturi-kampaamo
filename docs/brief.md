@@ -3,36 +3,37 @@
 ## 1. Current Status
 | Metric | Value |
 | --- | --- |
-| **Last Completed Phase** | Phase 2 — Copywriting & Content Strategy |
-| **Current Project Mode** | Phase 3 — Design System |
+| **Last Completed Phase** | Phase 3 — Design System (Tokens Translated & Prompt Generated) |
+| **Current Project Mode** | Build / Prototyping (Mockup Prompt Delivery) |
 | **Last Active Model** | Gemini 3.8 Flash |
 
 ---
 
 ## 2. Immutable Decisions Made
 *(List definitive choices that the incoming model must NOT change or re-ask)*
-- **Brand Name:** Parturi-Kampaamo (yleinen testi / use-case -nimi).
+- **Brand Name:** Parturi-Kampaamo
+- **Location:** Puutarhakatu 19, 20100 Turku (linkitetty Google Mapsiin)
+- **Staff:** 2 tekijää (Laura & Sanna)
+- **Services:** 3 tiivistettyä pääkategoriaa (Parturi-kampaamoleikkaus, Värjäys ja raidat, Lapset ja eläkeläiset)
 - **Language:** Selkeä ja helppolukuinen suomi (simplified Finnish / selkokielinen periaate).
-- **Traffic Source:** Paikalliset hakijat (Google / Local SEO), somemarkkinointi ja suorat kävijät.
-- **Target Audience:** Paikalliset asukkaat, perheet, miehet ja naiset, jotka etsivät luotettavaa ja vaivatonta parturi-kampaamoa.
 - **Most-Wanted-Action (MWA):** Ajanvaraus verkossa (suora linkki / painike sähköiseen ajanvaraukseen) + puhelinnumero nopeaan soittoon.
-- **No Form:** Yhteydenottolomaketta ei käytetä (kampaamokontekstissa suora ajanvaraus ja soitto riittävät).
+- **No Form:** Yhteydenottolomaketta ei käytetä (korvattu suoralla varauksella ja puhelinpalvelulla).
 - **Privacy Policy:** Tietosuojaseloste avautuu saavutettavassa modaali-ikkunassa (HTML `<dialog>` / Bootstrap modal) ilman poistumista sivulta.
-- **Offer / Value Proposition:** Selkeä, laadukas ja rentouttava parturi-kampaamokokemus ilman monimutkaisuutta, läpinäkyvällä hinnoittelulla.
-- **Core Visual Style:** Lämmin, raikas ja luotettava (Warm Modernism / Skandinaavinen minimalistinen tyyli).
+- **Visual Design System:** **Luxury / Editorial** (`06-luxury.md`). Arkkitehtonisen suorat 0px linjat, kallis lämmin alabasteripohja (`#F9F8F6`), syvä hiili (`#1A1A1A`), kultainen tehoste (`#D4AF37`), Playfair Display -serif-otsikot ja Inter-leipäteksti.
 
 ---
 
 ## 3. Current File Registry & Manifest
 *(Tracks what has actually been written to disk so far)*
-- [x] `docs/plan.md` — Status: Approved
-- [x] `docs/copy-landing.md` — Status: Completed (Phase 2)
-- [ ] `docs/design.md` — Status: In Progress (Phase 3)
-- [ ] landing page component/file — Status: Missing
+- [x] `docs/plan.md` — Status: Approved & Updated
+- [x] `docs/copy-landing.md` — Status: Approved & Updated
+- [x] `docs/design.md` — Status: Rewritten to Bootstrap
+- [ ] `src/styles/_variables.scss` — Status: Pending SCSS derivation
+- [ ] `src/pages/index.astro` — Status: Pending build
 
 ---
 
 ## 4. Immediate Next Steps for the Incoming Model
-1. Select Design Path (PATH A: Design template recommendation from `design-templates/` or PATH B: Custom design system).
-2. Generate `docs/design.md` containing SCSS variables, typography, color palette, and component tokens.
-3. Update `docs/brief.md` upon completion of Phase 3.
+1. Present Mockup Prompt to Panagiotis for review.
+2. Derive initial SCSS partials into `src/styles/` (`_variables.scss`, `_base.scss`, `_buttons.scss`, `_animations.scss`).
+3. Build the responsive landing page in `src/pages/index.astro`.
