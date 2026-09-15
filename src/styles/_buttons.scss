@@ -7,6 +7,10 @@
   font-weight: 500;
   text-transform: uppercase;
   border-radius: 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition:
     background-color 200ms ease,
     border-color 200ms ease,

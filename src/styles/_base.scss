@@ -44,6 +44,12 @@ a[target="_blank"] {
   text-decoration-style: dashed;
 }
 
+footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 img,
 svg {
   display: block;
