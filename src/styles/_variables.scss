@@ -1,37 +1,39 @@
 // ============================================================
-// Design Tokens - Ankelo Ky
-// Derived from: style.md (approved prototype)
+// Design Tokens - Parturi-Kampaamo (Luxury / Editorial)
+// Derived from: docs/design.md
 // ============================================================
 
-// 1. Colors (Custom palette)
-$primary: #ffd700;
-$secondary: #666666;
-$success: #7da86b;
-$warning: #e3b341;
-$danger: #c86a6a;
-$light: #f8f9fa;
-$dark: #090909;
+// 1. Colors
+$body-bg: #F9F8F6;
+$body-color: #1A1A1A;
+$primary: $body-color;
+$secondary: #6C6863;
+$warning: #D4AF37; // Metallic Gold
+$light: #FFFFFF;
+$dark: #141414;
 $black: #111111;
+$border-color: rgba(26, 26, 26, 0.12);
 
-// 2. Base Theme (Explicit overrides)
-$body-bg: #f8f9fa;
-$body-color: #212529;
-$border-color: #dee2e6;
+// 2. Typography
+$font-family-base: 'Inter', sans-serif;
+$headings-font-family: 'Playfair Display', serif;
+$headings-font-weight: 400;
+$headings-color: $body-color;
 
-// 3. Shape & Radius
-$border-radius: 0.125rem;
-$border-radius-sm: 0.125rem;
-$border-radius-lg: 0.25rem;
-$border-radius-pill: 9999px;
+// 3. Shape & Radius (Strict architectural 0px radius)
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$border-radius-pill: 0;
 
 // 4. Buttons
-$btn-font-weight: 700;
-$btn-padding-y: 0.875rem;
-$btn-padding-x: 1.5rem;
-$btn-border-radius: $border-radius;
+$btn-font-weight: 500;
+$btn-padding-y: 0.85rem;
+$btn-padding-x: 1.85rem;
+$btn-border-radius: 0;
 
 // 5. Forms / Inputs
-$input-bg: $body-bg;
+$input-bg: $light;
 $input-color: $body-color;
 $input-border-color: $border-color;
 $input-border-radius: 0;
@@ -43,18 +45,17 @@ $input-padding-x: 1rem;
 // 6. Components
 $card-border-color: $border-color;
 $card-border-radius: 0;
+$card-bg: $light;
+$modal-content-border-radius: 0;
+$modal-content-border-color: $border-color;
+$accordion-border-radius: 0;
+$accordion-border-color: $border-color;
+$accordion-bg: $light;
+$accordion-button-bg: $light;
+$accordion-button-active-bg: $light;
+$accordion-button-active-color: $warning;
+$accordion-button-focus-box-shadow: none;
 
-// 7. Navbar (Light variant)
-$navbar-light-color: $black;
-$navbar-light-brand-color: $navbar-light-color;
-$navbar-light-hover-color: $black;
-$navbar-light-brand-hover-color: $navbar-light-hover-color;
-
-// 8. Navbar (Dark variant)
-// These apply when .navbar-dark is used in HTML.
-$navbar-dark-color: rgba(255, 255, 255, 0.82);
-$navbar-dark-hover-color: $primary;
-$navbar-dark-active-color: $primary;
-$navbar-dark-brand-color: $primary;
-$navbar-dark-brand-hover-color: $primary;
-$navbar-dark-toggler-border-color: rgba(255, 255, 255, 0.16);
+// 7. Shadows
+$box-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+$box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);

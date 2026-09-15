@@ -1,60 +1,77 @@
 // _buttons.scss
+@use "sass:color";
 
 .btn {
-  // Keep custom transition timing and effects
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 0;
   transition:
-    transform 180ms ease,
-    filter 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
 
-  // Keep custom hover/active micro-interactions
-  &:hover {
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0) scale(0.99);
-  }
-
-  // Keep custom focus style (Bootstrap default is often too subtle or different)
   &:focus-visible {
-    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+    outline: 2px solid $warning;
+    outline-offset: 2px;
+    box-shadow: none;
   }
 }
 
-// ONLY keep this if Bootstrap's automatic contrast check 
-// makes the text white instead of black on your yellow primary.
-// If Bootstrap already makes it black, DELETE this block.
-.btn-primary {
-  color: $black; 
-  
+.btn-luxury-dark {
+  background-color: $primary;
+  color: #FFFFFF;
+  border: 1px solid $primary;
+  padding: 0.85rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+
   &:hover,
-  &:focus-visible,
-  &:active,
-  &.active {
-    color: $black;
-    /* Optional: Define a slightly darker hover state if desired, 
-    otherwise Bootstrap handles darkening automatically.*/
-    background-color: $primary; 
-    border-color: $primary; 
+  &:focus-visible {
+    background-color: $warning;
+    border-color: $warning;
+    color: #FFFFFF;
   }
 }
 
-// Keep this ONLY if you want outline-light to turn into Primary on hover
-// (Bootstrap default usually keeps it white/light)
-.btn-outline-light {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
+.btn-luxury-outline {
+  background-color: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  padding: 0.85rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
 
   &:hover,
-  &:focus-visible,
-  &:active,
-  &.active {
-    color: $black;
+  &:focus-visible {
     background-color: $primary;
-    border-color: $primary;
+    color: #FFFFFF;
+  }
+}
+
+.btn-luxury-gold {
+  background-color: $warning;
+  color: #FFFFFF;
+  border: 1px solid $warning;
+  padding: 0.85rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    background-color: #B89528;
+    border-color: #B89528;
+    color: #FFFFFF;
   }
 }

@@ -1,0 +1,30 @@
+---
+import { SALON_INFO } from "../data/site";
+---
+
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content border-luxury p-3">
+      <div class="modal-header border-bottom border-luxury pb-3">
+        <h3 class="modal-title fs-5" id="privacyModalLabel">Tietosuojaseloste</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+      </div>
+      <div class="modal-body text-secondary small py-4">
+        <p><strong>1. Rekisterinpitäjä</strong><br />
+        {SALON_INFO.name}, {SALON_INFO.address}.</p>
+        
+        <p><strong>2. Kerättävät henkilötiedot</strong><br />
+        Keräämme ainoastaan palvelun tuottamiseen ja ajanvarauksen vahvistamiseen tarvittavat tiedot: nimi, puhelinnumero, sähköpostiosoite sekä mahdolliset asiakkaan antamat toiveet tai allergiatiedot.</p>
+
+        <p><strong>3. Tietojen käsittelyn tarkoitus</strong><br />
+        Tietoja käytetään vain ajanvarausten hallinnointiin, varausvahvistusten ja muistutusten lähettämiseen sekä asiakassuhteen ylläpitoon. Emme koskaan luovuta tietojasi kolmansille osapuolille emmekä käytä niitä luvattomaan suoramarkkinointiin.</p>
+
+        <p><strong>4. Asiakkaan oikeudet</strong><br />
+        Sinulla on oikeus tarkastaa sinusta tallennetut tiedot tai pyytää tietojesi poistamista milloin tahansa ilmoittamalla siitä kampaamollemme sähköpostitse tai puhelimitse ({SALON_INFO.phone}).</p>
+      </div>
+      <div class="modal-footer border-top border-luxury pt-3">
+        <button type="button" class="btn btn-luxury-dark py-2 px-4" data-bs-dismiss="modal">Sulje</button>
+      </div>
+    </div>
+  </div>
+</div>

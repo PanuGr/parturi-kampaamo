@@ -1,4 +1,32 @@
 /* src/styles/_navbar.scss */
-@use "variables" as vars;
 
-/* Navbar component styles */
+.header-nav {
+  background-color: rgba(249, 248, 246, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $border-color;
+}
+
+.brand-title {
+  font-family: $headings-font-family;
+  letter-spacing: 0.2em;
+  font-size: 1.1rem;
+  color: $primary;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  background: #FFFFFF;
+  border-top: 1px solid $border-color;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+
+  @media (min-width: 992px) {
+    display: none !important;
+  }
+}

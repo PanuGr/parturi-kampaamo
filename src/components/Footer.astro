@@ -1,31 +1,20 @@
 ---
+import { SALON_INFO } from "../data/site";
 const currentYear = new Date().getFullYear();
-import { SOCIAL_LINKS, NAVIGATION, getHref } from "../data/site";
-
 ---
-  
-<footer class="py-5 border-top">
-    <div class="container w-75 m-auto">
-        <div class="row mb-4">
-            <div class="col-md-3 ">
-               
-            </div>
-            <div class="col-md-3">
-               
-            </div>
-            <div class="col-md-3">
-                
-            </div>
-            <div class="col-md-3">
-                
-            </div>         
-        </div>
-       <hr />
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-            <small class="text-body-secondary mb-0">&copy; {currentYear} Name</small>
-            <div class="d-flex gap-3">
-               
-            </div>
-        </div>
+
+<footer class="py-4 border-top border-luxury bg-white">
+  <div class="container-xl d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <div class="small text-secondary">
+      © {currentYear} {SALON_INFO.name}. Kaikki oikeudet pidätetään.
     </div>
+    <div class="d-flex gap-4 small">
+      <a href="#privacyModal" data-bs-toggle="modal" data-bs-target="#privacyModal" class="text-secondary text-decoration-none">
+        Tietosuojaseloste
+      </a>
+      <a href={SALON_INFO.phoneTel} class="text-secondary text-decoration-none">
+        Puh. {SALON_INFO.phone}
+      </a>
+    </div>
+  </div>
 </footer>

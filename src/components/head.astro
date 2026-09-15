@@ -1,6 +1,5 @@
 ---
 import "../styles/index.scss";
-import { Font } from "astro:assets";
 import { SEOMetadata } from "astro-seo-metadata";
 
 export interface Props {
@@ -16,12 +15,17 @@ import {
   SITE_KEYWORDS,
   SOCIAL_IMAGE,
   FAVICON,
+  SALON_INFO,
 } from "../data/site";
 ---
-<Font cssVariable="--sans-DM-Sans" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="color-scheme" content="dark" />
+<meta name="color-scheme" content="light" />
+
+<!-- Bunny Fonts (GDPR compliant: Inter & Playfair Display) -->
+<link rel="preconnect" href="https://fonts.bunny.net" />
+<link href="https://fonts.bunny.net/css?family=inter:400,500,600|playfair-display:400,500,600&display=swap" rel="stylesheet" />
+
 <link rel="sitemap" href="/sitemap-0.xml" />
 <meta name="keywords" content={SITE_KEYWORDS} />
 <SEOMetadata
@@ -36,80 +40,48 @@ import {
   type={"website"}
   astroGenerator={true}
 />
+
 <!-- Scripts -->
 <script>
   const isDev = import.meta.env.DEV;
 
   if (isDev) {
-    //console.log("Import entire Bootstrap in dev");
     import("bootstrap");
   } else {
-    //console.log("Import only what you need in production");
     import("bootstrap/js/dist/button");
     import("bootstrap/js/dist/collapse");
-    import("bootstrap/js/dist/dropdown");
+    import("bootstrap/js/dist/modal");
   }
 </script>
+
 <script is:inline type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "HairSalon",
+    "name": "Parturi-Kampaamo",
+    "description": "Ylellinen ja rentouttava parturi-kampaamo Turun keskustassa. Selkeä hinnoittelu, asiantunteva palvelu ja 100 % tyytyväisyystakuu.",
+    "url": "https://parturi-kampaamo.netlify.app/",
+    "telephone": "+358101234567",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Puutarhakatu 19",
+      "addressLocality": "Turku",
+      "postalCode": "20100",
+      "addressCountry": "FI"
+    },
+    "openingHoursSpecification": [
       {
-        "@type": "Organization",
-        "@id": "https://digisolutech.netlify.app/#organization",
-        "name": "DigiSolutech",
-        "url": "https://digisolutech.netlify.app/",
-        "logo": "https://digisolutech.netlify.app/images/apple.png",
-        "sameAs": [
-          "https://www.facebook.com/profile.php?id=61589313329650",
-          "https://www.youtube.com/@digisolutech",
-          "https://www.linkedin.com/in/panagiotis-panagiotakopoulos",
-          "https://www.instagram.com/digisolutech5081/",
-          "https://www.google.com/maps?cid=15102198032253865202"
-        ]
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
       },
       {
-        "@type": "LocalBusiness",
-        "@id": "https://digisolutech.netlify.app/#localbusiness",
-        "name": "DigiSolutech",
-        "parentOrganization": {
-          "@id": "https://digisolutech.netlify.app/#organization"
-        },
-        "url": "https://digisolutech.netlify.app/",
-        "priceRange": "€€",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Turku",
-          "addressCountry": "FI"
-        },
-        "sameAs": [
-          "https://www.facebook.com/profile.php?id=61589313329650",
-          "https://www.youtube.com/@digisolutech",
-          "https://www.linkedin.com/in/panagiotis-panagiotakopoulos",
-          "https://www.instagram.com/digisolutech5081/",
-          "https://www.google.com/maps?cid=15102198032253865202"
-        ]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://digisolutech.netlify.app/#person",
-        "name": "Panagiotis Panagiotakopoulos",
-        "jobTitle": "Verkkosivusuunnittelija",
-        "worksFor": { "@id": "https://digisolutech.netlify.app/#organization" },
-        "sameAs": [
-          "https://www.facebook.com/profile.php?id=61589313329650",
-          "https://www.youtube.com/@digisolutech",
-          "https://www.linkedin.com/in/panagiotis-panagiotakopoulos",
-          "https://www.instagram.com/digisolutech5081/",
-          "https://www.google.com/maps?cid=15102198032253865202"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://digisolutech.netlify.app/#website",
-        "name": "DigiSolutech",
-        "url": "https://digisolutech.netlify.app/",
-        "publisher": { "@id": "https://digisolutech.netlify.app/#organization" }
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "10:00",
+        "closes": "16:00"
       }
     ]
   }

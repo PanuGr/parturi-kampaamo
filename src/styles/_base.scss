@@ -1,18 +1,27 @@
 // ============================================================
-// DON'T OVERRIDE
+// DON'T OVERRIDE (Preserved)
 // ============================================================
 
 @view-transition {
   navigation: auto;
 }
+
 html {
   interpolate-size: allow-keywords;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: $font-family-base;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: $body-bg;
+  color: $body-color;
+  padding-bottom: 72px;
+
+  @media (min-width: 992px) {
+    padding-bottom: 0;
+  }
 }
 
 h1,
@@ -21,7 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: system-ui, sans-serif;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
   text-wrap: balance;
 }
 
@@ -32,17 +43,18 @@ a {
 a[target="_blank"] {
   text-decoration-style: dashed;
 }
-//add automatically external link icon to all external links
-a[href^="http"]:not([href*="domain-name"]):not(:has(img))::after {
-    display: inline-block;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background-color: currentColor;
-    background-image: url("/images/arrow-up-right.svg"); 
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 0.25rem;
+
+// Automatic external link icon
+a[href^="http"]:not([href*="parturi-kampaamo"]):not([href*="localhost"]):not(:has(img))::after {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: currentColor;
+  background-image: url("/images/arrow-up-right.svg"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 0.25rem;
 }
 
 img,
@@ -52,7 +64,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 2px solid $primary;
+  outline: 2px solid $warning;
   outline-offset: 2px;
 }
 
@@ -63,5 +75,56 @@ svg {
   left: 1rem;
   padding: 10px;
   color: white;
-  z-index: 1;
+  z-index: 1050;
+}
+
+// ============================================================
+// Luxury Editorial Specifics
+// ============================================================
+
+*, *::before, *::after,
+.btn, .card, .modal-content, .accordion-item, .accordion-button,
+.dropdown-menu, .form-control, .badge {
+  border-radius: 0 !important;
+}
+
+.overline {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $warning;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.lead-editorial {
+  font-size: 1.15rem;
+  color: $secondary;
+  font-weight: 400;
+  max-width: 60ch;
+}
+
+.border-luxury {
+  border: 1px solid $border-color !important;
+}
+
+.card-luxury {
+  background-color: $light;
+  border: 1px solid $border-color;
+  box-shadow: $box-shadow;
+  transition: border-color 0.25s ease;
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+
+.bg-dark-luxury {
+  background-color: $dark;
+  color: #F9F8F6;
+
+  h2, h3, h4 {
+    color: #FFFFFF;
+  }
 }

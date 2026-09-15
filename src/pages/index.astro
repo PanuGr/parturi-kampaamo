@@ -1,150 +1,521 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import {// add your icons here} from "@lucide/astro";
+import {
+  Phone,
+  ArrowRight,
+  Clock,
+  CircleParking,
+  Accessibility,
+  MessageSquareHeart,
+  Sparkles,
+  Leaf,
+  MapPin,
+  Bus,
+  CreditCard,
+  Calendar,
+} from "@lucide/astro";
+import { SALON_INFO } from "../data/site";
 ---
 
-<style>
-</style>
 <Layout
-    heading=""
-    lead=""
-    cta=""
-    heroBg="linear-gradient(rgba(5, 5, 6, 0.6), rgba(5, 5, 6, 0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&fm=avif&q=10&w=1440')"
+  title="Parturi-Kampaamo | Kauniit ja huolitellut hiukset – Turku"
+  description="Ylellinen ja rentouttava parturi-kampaamo Turun keskustassa, Puutarhakatu 19. Selkeä hinnoittelu, asiantunteva palvelu. Varaa aikasi verkossa 24/7."
 >
-    <meta
-        name="google-site-verification"
-        content=""
-        slot="head"
-    />
+  <!-- 1. Hero Section (Above-the-fold) -->
+  <section class="py-5 py-lg-6 position-relative border-bottom border-luxury">
+    <div class="container-xl py-lg-4">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <span class="overline">PALVELEVA PARTURI-KAMPAAMO</span>
+          <h1 class="display-4 fw-normal mt-2 mb-4">
+            Kauniit ja huolitellut hiukset – helposti ja rennosti
+          </h1>
+          <p class="lead-editorial mb-4">
+            Asiantunteva palvelu, selkeät hinnat ja rentouttava hetki arjen keskellä. Tervetuloa sellaisena kuin olet.
+          </p>
 
-    <main id="main-content">
-       
-        <!-- Contact -->
-        <section id="contact" class="py-5 section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center mb-5">
-                        <h2 class="mb-3 text-uppercase" id="form-heading">
-                             Ota yhteyttä ja aloitetaan!
-                        </h2>
-                        <p class="lead text-muted">
-                            Ota yhteyttä ja aloitetaan!
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div
-                            class="card border-white border-opacity-10 shadow-md"
-                        >
-                            <div class="card-body p-4 p-lg-5">
-                                <form
-                                    id="contactForm"
-                                    aria-labelledby="form-heading"
-                                    method="POST"
-                                    netlify
-                                    name="contact-form"
-                                    autocomplete="on"
-                                    class="row g-3"
-                                >
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label"
-                                            >Nimi *</label
-                                        >
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            class="form-control"
-                                            placeholder="Adam Square"
-                                            autocomplete="name"
-                                            title="Numbers and symbols are not allowed"
-                                            aria-label="Name"
-                                            required
-                                        />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label"
-                                            >Sähköposti *</label
-                                        >
-                                        <input
-                                            id="email"
-                                            name="email"
-                                            type="email"
-                                            class="form-control"
-                                            placeholder="email@address.com"
-                                            autocomplete="email"
-                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                                            required
-                                            title="Please enter a valid email address"
-                                            aria-label="email address"
-                                        />
-                                    </div>
-                                    <div class="col-12">
-                                        <label
-                                            for="companyName"
-                                            class="form-label">Yrittys</label
-                                        >
-                                        <input
-                                            type="text"
-                                            id="companyName"
-                                            name="companyName"
-                                            class="form-control"
-                                            placeholder="Yritys"
-                                            autocomplete="organization"
-                                            aria-label="Company's name"
-                                        />
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="message" class="form-label"
-                                            >Projektin tiedot *</label
-                                        >
-                                        <textarea
-                                            class="form-control"
-                                            id="message"
-                                            name="message"
-                                            rows="4"
-                                            placeholder="Kerro meille projektistasi. Millaisen verkkosivuston tarvitset? Mikä on yrityksesi toimiala?"
-                                            aria-label="Type your message"
-                                            required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                type="checkbox"
-                                                id="policyPrivacy"
-                                                required
-                                                name="policyPrivacy"
-                                            />
-                                            <label
-                                                class="form-check-label"
-                                                for="policyPrivacy"
-                                                >Hyväksyn, että henkilötietojani
-                                                käsitellään <a
-                                                    href="/privacy"
-                                                    aria-label="Lue tietosuojakäytännön uudella sivulla"
-                                                    target="_blank"
-                                                    >tietosuojakäytännön</a
-                                                >
-                                                mukaisesti</label
-                                            >
-                                        </div>
-                                    </div>
+          <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-3 pt-2 mb-5">
+            <a href="#ajanvaraus" class="btn btn-luxury-dark">
+              <span>Varaa aika verkossa</span>
+              <ArrowRight class="lucide-icon" size={18} />
+            </a>
+            <a href={SALON_INFO.phoneTel} class="btn btn-luxury-outline">
+              <Phone class="lucide-icon" size={18} />
+              <span>tai soita {SALON_INFO.phone}</span>
+            </a>
+          </div>
 
-                                    <div class="col-12">
-                                        <button
-                                            type="submit"
-                                            class="btn btn-primary btn-lg w-100"
-                                            >Ota yhteyttä</button
-                                        >
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Trust Badges -->
+          <div class="row g-3 pt-3 border-top border-luxury">
+            <div class="col-6 col-md-3">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center gap-1 mb-1">
+                  <span style="color: var(--warning, #D4AF37);">★★★★★</span>
+                  <strong class="text-dark small ms-1">4.9 / 5</strong>
                 </div>
+                <small class="text-secondary" style="font-size: 0.75rem;">Yli 250 tyytyväistä asiakasta</small>
+              </div>
             </div>
-        </section>
-    </main>
+            <div class="col-6 col-md-3">
+              <div class="d-flex align-items-center gap-2">
+                <Clock class="lucide-icon text-muted" size={18} />
+                <small class="text-secondary lh-sm">Ajanvaraus avoinna 24/7</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="d-flex align-items-center gap-2">
+                <CircleParking class="lucide-icon text-muted" size={18} />
+                <small class="text-secondary lh-sm">Ilmainen pysäköinti edessä</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="d-flex align-items-center gap-2">
+                <Accessibility class="lucide-icon text-muted" size={18} />
+                <small class="text-secondary lh-sm">Esteetön sisäänpääsy</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="position-relative p-2 p-md-3 bg-white border border-luxury shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80"
+              alt="Rauhallinen ja tyylikäs parturi-kampaamomiljöö Turussa"
+              class="img-fluid w-100 object-fit-cover"
+              style="height: 480px;"
+              loading="eager"
+            />
+            <div class="p-3 text-center border-top border-luxury bg-light mt-2">
+              <span class="fst-italic text-secondary small" style="font-family: var(--headings-font-family);">
+                "Hiukset ovat asuste, jota kannat joka ikinen päivä."
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Palvelut ja selkeät hinnat (Services & Pricing) -->
+  <section id="palvelut" class="py-5 py-lg-6">
+    <div class="container-xl">
+      <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+        <span class="overline">HINNASTO & PALVELUT</span>
+        <h2 class="display-6 mb-3">Selkeät ja läpinäkyvät hinnat</h2>
+        <p class="text-secondary">
+          Ei piilokuluja. Kaikki hinnat sisältävät alv:n 25,5 %, henkilökohtaisen konsultaation ja laadukkaat hoitotuotteet.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-luxury p-4 p-xl-5 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="badge bg-light text-dark border border-luxury px-2 py-1 small">30–45 min</span>
+                <span class="fs-4 text-dark fw-bold" style="font-family: var(--headings-font-family);">38 € – 48 €</span>
+              </div>
+              <h3 class="fs-4 mt-3 mb-3">Parturi-kampaamoleikkaus</h3>
+              <p class="text-secondary small mb-4">
+                Sisältää huolellisen alkukonsultaation, rentouttavan hiustenpesun ja hiuspohjan hieronnan, yksilöllisen leikkauksen sekä viimeistelyn muotoilutuotteilla.
+              </p>
+            </div>
+            <div class="pt-3 border-top border-luxury">
+              <a href="#ajanvaraus" class="btn btn-luxury-dark w-100">
+                <span>Varaa hiustenleikkaus</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-luxury p-4 p-xl-5 h-100 d-flex flex-column justify-content-between position-relative">
+            <div>
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="badge bg-light text-dark border border-luxury px-2 py-1 small">1 h 45 min – 2 h 30 min</span>
+                <span class="fs-4 text-dark fw-bold" style="font-family: var(--headings-font-family);">alk. 115 €</span>
+              </div>
+              <h3 class="fs-4 mt-3 mb-3">Värjäys ja raidat</h3>
+              <p class="text-secondary small mb-4">
+                Koko pään väri, tyviväri tai moniväriraidoitus toiveidesi mukaan. Sisältää sävykäsittelyn, syväkosteuttavan tehohoidon, leikkauksen ja föönauksen.
+              </p>
+            </div>
+            <div class="pt-3 border-top border-luxury">
+              <a href="#ajanvaraus" class="btn btn-luxury-dark w-100">
+                <span>Varaa väripalvelu</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-luxury p-4 p-xl-5 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="badge bg-light text-dark border border-luxury px-2 py-1 small">30 min</span>
+                <span class="fs-4 text-dark fw-bold" style="font-family: var(--headings-font-family);">25 € – 32 €</span>
+              </div>
+              <h3 class="fs-4 mt-3 mb-3">Lapset ja eläkeläiset</h3>
+              <p class="text-secondary small mb-4">
+                Rauhallinen, ystävällinen ja kiireetön hiustenleikkaus erikoishintaan. Otamme jokaisen asiakkaan vastaan pehmeällä ja huomioivalla otteella.
+              </p>
+            </div>
+            <div class="pt-3 border-top border-luxury">
+              <a href="#ajanvaraus" class="btn btn-luxury-dark w-100">
+                <span>Varaa erikoishintainen leikkaus</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Miksi valita meidät (Core Benefits) -->
+  <section class="py-5 py-lg-6 bg-white border-top border-bottom border-luxury">
+    <div class="container-xl">
+      <div class="text-center mb-5">
+        <span class="overline">LUPAUKSEMME SINULLE</span>
+        <h2 class="display-6">Miksi valita meidät?</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 border border-luxury h-100">
+            <div class="mb-3 text-secondary">
+              <MessageSquareHeart size={32} class="text-dark" />
+            </div>
+            <h3 class="fs-5 mb-2">Kuuntelemme toiveitasi</h3>
+            <p class="text-secondary small mb-0">
+              Alkukonsultaatio kuuluu aina jokaiseen palveluun. Emme leikkaa liikaa tai tee oletuksia, vaan katsomme toivotun mallin yhdessä läpi.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 border border-luxury h-100">
+            <div class="mb-3 text-secondary">
+              <Sparkles size={32} class="text-dark" />
+            </div>
+            <h3 class="fs-5 mb-2">Rauhallinen tunnelma</h3>
+            <p class="text-secondary small mb-0">
+              Meillä voit hengähtää rauhassa. Voit myös halutessasi valita varatessasi täysin hiljaisen "silent service" -palvelun ilman rupattelua.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 border border-luxury h-100">
+            <div class="mb-3 text-secondary">
+              <Leaf size={32} class="text-dark" />
+            </div>
+            <h3 class="fs-5 mb-2">Pohjoismaiset tuotteet</h3>
+            <p class="text-secondary small mb-0">
+              Käytämme vain korkealuokkaisia, hellävaraisia ja tuoksultaan mietoja ammattilaistuotteita, jotka suojaavat hiustasi ja hiuspohjaasi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Osaavat ja ystävälliset tekijät (Team) -->
+  <section class="py-5 py-lg-6">
+    <div class="container-xl">
+      <div class="text-center mb-5">
+        <span class="overline">ASIANTUNTIJAT</span>
+        <h2 class="display-6 mb-3">Osaavat ja ystävälliset tekijät</h2>
+        <p class="text-secondary">
+          Olemme kokeneita alan ammattilaisia, jotka päivittävät jatkuvasti osaamistaan ja tekevät työtään suurella sydämellä.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Stylist 1 -->
+        <div class="col-md-6 col-lg-5">
+          <div class="card-luxury p-4 h-100 d-flex flex-column flex-sm-row gap-4 align-items-center align-items-sm-start">
+            <img
+              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=400&q=80"
+              alt="Laura - Parturi-kampaaja & värispesialisti"
+              class="object-fit-cover border border-luxury flex-shrink-0"
+              style="width: 140px; height: 180px;"
+              loading="lazy"
+            />
+            <div>
+              <h3 class="fs-4 mb-1">Laura</h3>
+              <span class="text-muted small text-uppercase d-block mb-3" style="letter-spacing: 0.1em; font-size: 0.78rem;">
+                Parturi-kampaaja & värispesialisti
+              </span>
+              <p class="text-secondary small mb-0">
+                Erityisosaamisena luonnolliset ja pehmeät vaalennukset, monivärit ja sävytykset sekä tarkat ja huolitellut polkkatukat. Yli 12 vuoden kokemus alalta.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stylist 2 -->
+        <div class="col-md-6 col-lg-5">
+          <div class="card-luxury p-4 h-100 d-flex flex-column flex-sm-row gap-4 align-items-center align-items-sm-start">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+              alt="Sanna - Kampaaja & juhlakampaukset"
+              class="object-fit-cover border border-luxury flex-shrink-0"
+              style="width: 140px; height: 180px;"
+              loading="lazy"
+            />
+            <div>
+              <h3 class="fs-4 mb-1">Sanna</h3>
+              <span class="text-muted small text-uppercase d-block mb-3" style="letter-spacing: 0.1em; font-size: 0.78rem;">
+                Kampaaja & juhlakampaukset
+              </span>
+              <p class="text-secondary small mb-0">
+                Kiharakäsittelyjen, kestävien juhlakampausten ja hiuspohjaa hoitavien hemmotteluhoitojen taituri. Tunnettu lempeästä ja huolellisesta palvelustaan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Asiakaskokemukset (Social Proof) -->
+  <section class="py-5 py-lg-6 bg-white border-top border-bottom border-luxury">
+    <div class="container-xl">
+      <div class="text-center mb-5">
+        <span class="overline">PALAUTTEET</span>
+        <h2 class="display-6">Mitä asiakkaamme sanovat</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 p-xl-5 border border-luxury h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="mb-3" style="color: var(--warning, #D4AF37);">★★★★★</div>
+              <blockquote class="fs-6 fst-italic mb-3" style="font-family: var(--headings-font-family);">
+                "Ensimmäinen kampaamokäynti vuosiin, josta lähdin kyyneleet silmissä ilosta. Väristä tuli täydellisen luonnollinen ja leikkaus asettuu itsestään."
+              </blockquote>
+            </div>
+            <footer class="pt-3 border-top text-secondary small fw-medium">
+              — Anna M., Turku
+            </footer>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 p-xl-5 border border-luxury h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="mb-3" style="color: var(--warning, #D4AF37);">★★★★★</div>
+              <blockquote class="fs-6 fst-italic mb-3" style="font-family: var(--headings-font-family);">
+                "Arvostan täsmällisyyttä, selkeää hinnoittelua ja sitä, että auto on helppo jättää suoraan oven eteen. Parturileikkaus hoitui nopeasti ja erittäin siististi."
+              </blockquote>
+            </div>
+            <footer class="pt-3 border-top text-secondary small fw-medium">
+              — Juha K., Raisio
+            </footer>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 p-xl-5 border border-luxury h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="mb-3" style="color: var(--warning, #D4AF37);">★★★★★</div>
+              <blockquote class="fs-6 fst-italic mb-3" style="font-family: var(--headings-font-family);">
+                "Valitsin nettivarauksessa 'hiljaisen palvelun', ja oli aivan taivaallista vain nojata taaksepäin, sulkea silmät ja rentoutua työpäivän jälkeen."
+              </blockquote>
+            </div>
+            <footer class="pt-3 border-top text-secondary small fw-medium">
+              — Tiina S., Naantali
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Käytännön tiedot ja Sijainti (Practical Info & Location) -->
+  <section class="py-5 py-lg-6">
+    <div class="container-xl">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-6">
+          <span class="overline">KÄYNTIOSOITE & SAAPUMINEN</span>
+          <h2 class="display-6 mb-4">Helppo tulla ja vaivaton asioida</h2>
+          
+          <div class="d-flex flex-column gap-4">
+            <div class="d-flex gap-3">
+              <div class="text-secondary">
+                <MapPin size={24} />
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1">Osoite</h3>
+                <a
+                  href={SALON_INFO.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-decoration-none text-dark fw-medium"
+                >
+                  {SALON_INFO.address} <span class="small text-secondary">(Avaa Google Maps ↗)</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="text-secondary">
+                <Clock size={24} />
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1">Aukioloajat</h3>
+                <p class="text-secondary small mb-0">
+                  Maanantai – Perjantai: <strong>{SALON_INFO.openingHours.weekdays}</strong><br />
+                  Lauantai: <strong>{SALON_INFO.openingHours.saturday}</strong><br />
+                  Sunnuntai: {SALON_INFO.openingHours.sunday}
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="text-secondary">
+                <CircleParking size={24} />
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1">Pysäköinti</h3>
+                <p class="text-secondary small mb-0">
+                  Ilmaiset 2 tunnin kiekkopaikat suoraan kampaamon ikkunan edessä ja kadun toisella puolella.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="text-secondary">
+                <Bus size={24} />
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1">Julkinen liikenne</h3>
+                <p class="text-secondary small mb-0">
+                  Lähin bussipysäkki sijaitsee vain 50 metrin päässä (linjat 32, 42 ja 220).
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="text-secondary">
+                <Accessibility size={24} />
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1">Esteettömyys</h3>
+                <p class="text-secondary small mb-0">
+                  Täysin esteetön sisäänkäynti katutasosta ilman portaita. Tilava pesupiste soveltuu liikuntarajoitteisille.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="text-secondary">
+                <CreditCard size={24} />
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1">Maksutavat</h3>
+                <p class="text-secondary small mb-0">
+                  Pankki- ja luottokortit (Visa, Mastercard, Amex), MobilePay sekä käteinen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="border border-luxury p-3 bg-white">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1968.2127276587425!2d22.253683677461947!3d60.45037622159048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c76fe424268eb%3A0x6bfe73f550ee979b!2sPuutarhakatu%2019%2C%2020100%20Turku!5e0!3m2!1sfi!2sfi!4v1715690000000!5m2!1sfi!2sfi"
+              width="100%"
+              height="420"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Parturi-Kampaamo sijainti Turun Puutarhakadulla"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Usein kysytyt kysymykset (FAQ & 24h peruutusehdot) -->
+  <section class="py-5 py-lg-6 bg-white border-top border-bottom border-luxury">
+    <div class="container-xl" style="max-width: 800px;">
+      <div class="text-center mb-5">
+        <span class="overline">USEIN KYSYTYT KYSYMYKSET</span>
+        <h2 class="display-6">Mitä haluaisit tietää?</h2>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Miten peruutan tai siirrän varatun ajan? (24h peruutusehto)
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Kunnioitamme aikaasi ja toivomme samaa sinulta. Ajanvarauksen voi peruuttaa tai siirtää kuluitta viimeistään <strong>24 tuntia ennen</strong> varattua aikaa varausvahvistuksen linkistä tai soittamalla meille. Alle 24h tehdyistä peruutuksista tai peruuttamattomasta ajasta veloitamme 50 % varatun palvelun hinnasta.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              En tiedä mitä väripalvelua minun pitäisi varata – miten toimin?
+            </button>
+          </h3>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Ei huolta! Jos kyseessä on suurempi muutos (kuten tummasta vaaleaksi tai pitkät paksut hiukset), valitse nettivarauksesta <em>"Värjäys ja leikkaus (pitkät hiukset)"</em> tai soita meille numeroon <strong>{SALON_INFO.phone}</strong>. Voit myös tulla paikan päälle maksuttomaan 10 minuutin konsultaatioon ennen varauksen tekoa.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Pääseekö teille ilman ajanvarausta?
+            </button>
+          </h3>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Palvelemme pääsääntöisesti ajanvarauksella, jotta voimme taata rauhallisen hetken jokaiselle asiakkaalle. Jos kalenterissamme on peruutusaikoja tai vapaata tilaa, otamme mielellämme vastaan myös ilman ajanvarausta. Voit tarkistaa päivän vapaat ajat suoraan nettivarauksestamme reaaliajassa.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Loppukehoite (Bottom CTA) -->
+  <section id="ajanvaraus" class="py-5 py-lg-6 bg-dark-luxury text-center">
+    <div class="container-xl py-lg-4">
+      <span class="overline" style="color: var(--warning, #D4AF37);">VARAA OMA HETKESI</span>
+      <h2 class="display-5 text-white mb-4">Tervetuloa rentoutumaan ja uudistumaan</h2>
+      <p class="text-white-50 mx-auto mb-5 fs-5" style="max-width: 600px;">
+        Varaa aikasi kätevästi verkossa kellon ympäri tai pirauta meille aukioloaikoina.
+      </p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href={SALON_INFO.bookingUrl} target="_blank" rel="noopener noreferrer" class="btn btn-luxury-gold px-5 py-3">
+          <span>Varaa aika verkossa (24/7)</span>
+          <Calendar size={18} />
+        </a>
+        <a href={SALON_INFO.phoneTel} class="btn btn-outline-light px-4 py-3 border-luxury">
+          <Phone size={18} />
+          <span>Soita {SALON_INFO.phone}</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
